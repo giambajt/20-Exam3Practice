@@ -7,7 +7,7 @@ This problem provides practice at:
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
          and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -76,7 +76,7 @@ def shape(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     ###########################################################################
@@ -88,7 +88,22 @@ def shape(r):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  15 minutes.
     # -------------------------------------------------------------------------
-
+    loops = 0
+    n=r
+    for k in range(r):
+        for f in range(loops):
+            print(' ', end='')
+        for j in range(r-loops):
+            print('+', end='')
+        print('!', end='')
+        for h in range(r-loops):
+            print(n,end='')
+            n=n-1
+        for g in range(loops):
+            print('-', end='')
+        loops = loops + 1
+        print()
+        n=r - loops
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
